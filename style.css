@@ -72,3 +72,16 @@ h2 {
 .button:hover {
   background: #1d4ed8;
 }
+
+a {
+  color: #2563eb;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+}
+
+.button:hover {
+  background: #1d4ed8;
+}
