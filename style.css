@@ -1,4 +1,4 @@
-/* --- CONFIGURACIÓN Y VARIABLES --- */
+/* --- RESET Y VARIABLES --- */
 * {
   margin: 0;
   padding: 0;
@@ -16,22 +16,21 @@
 
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  background: var(--rosa-fondo);
+  background-color: var(--rosa-fondo);
   color: var(--texto-oscuro);
   line-height: 1.6;
-  padding: 80px 20px;
+  padding: 60px 20px;
 }
 
 .container {
-  max-width: 900px;
+  max-width: 850px;
   margin: 0 auto;
 }
 
 /* --- HEADER --- */
 header {
-  margin-bottom: 80px;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
+  margin-bottom: 60px;
+  animation: fadeInUp 0.8s ease-out;
 }
 
 h1 {
@@ -43,39 +42,40 @@ h1 {
   gap: 15px;
 }
 
-.header-socials {
-  margin-top: 15px;
+.subtitle {
+  font-size: 19px;
+  color: var(--texto-secundario);
+  margin: 10px 0 25px 0;
+}
+
+.header-actions {
   display: flex;
-  gap: 20px;
-  font-size: 28px; /* Un poquito más grandes */
+  align-items: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.header-socials {
+  display: flex;
+  gap: 15px;
+  font-size: 24px;
 }
 
 .header-socials a {
   color: var(--texto-secundario);
-  transition: color 0.3s, transform 0.3s;
+  transition: 0.3s;
 }
 
 .header-socials a:hover {
   color: var(--rosa-brillante);
-  transform: scale(1.2);
+  transform: scale(1.1);
 }
 
-.subtitle {
-  font-size: 19px;
-  color: var(--texto-secundario);
-  font-weight: 500;
-}
-
-/* --- SECCIONES Y ANIMACIÓN --- */
+/* --- SECCIONES --- */
 section {
-  margin-bottom: 80px;
-  opacity: 0;
-  animation: fadeInUp 0.8s ease-out forwards;
+  margin-bottom: 60px;
+  animation: fadeInUp 1s ease-out;
 }
-
-#sobre-mi { animation-delay: 0.2s; }
-#proyectos { animation-delay: 0.4s; }
-#contacto { animation-delay: 0.6s; }
 
 h2 {
   font-size: 26px;
@@ -84,45 +84,49 @@ h2 {
   padding-left: 15px;
 }
 
-/* --- TARJETAS --- */
+p { margin-bottom: 15px; }
+
+/* --- TARJETAS (CARD) --- */
 .card {
-  background: #ffffff;
-  padding: 35px;
-  border-radius: 24px;
+  background: white;
+  padding: 30px;
+  border-radius: 20px;
   border: 1px solid var(--rosa-suave);
-  box-shadow: 0 10px 40px rgba(236, 72, 153, 0.08);
+  box-shadow: 0 10px 30px rgba(236, 72, 153, 0.05);
   transition: 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-8px);
+  transform: translateY(-5px);
+  box-shadow: 0 15px 40px rgba(236, 72, 153, 0.1);
 }
 
 .project-media {
   width: 100%;
-  border-radius: 18px;
-  margin: 25px 0;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  border-radius: 15px;
+  margin: 20px 0;
 }
 
 /* --- BOTONES --- */
 .buttons {
-  margin-top: 25px;
   display: flex;
-  gap: 12px;
+  gap: 10px;
+  margin-top: 20px;
 }
 
 .button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  padding: 12px 24px;
-  border-radius: 12px;
+  padding: 12px 20px;
+  border-radius: 10px;
   text-decoration: none;
   font-weight: 600;
   background: var(--rosa-brillante);
   color: white;
-  transition: 0.2s;
+  transition: 0.3s;
+  border: none;
+  cursor: pointer;
 }
 
 .button:hover {
@@ -135,32 +139,51 @@ h2 {
   color: var(--rosa-oscuro);
 }
 
-/* --- CONTACTO --- */
+.cv-button {
+  background: transparent;
+  color: var(--rosa-brillante);
+  border: 2px solid var(--rosa-brillante);
+}
+
+/* --- CONTACTO (CORREGIDO) --- */
 .contact-grid {
   display: flex;
-  gap: 20px;
+  gap: 15px;
+  flex-wrap: wrap;
 }
 
 .contact-item {
   display: flex;
   align-items: center;
   gap: 10px;
-  padding: 15px 25px;
+  padding: 12px 20px;
   background: white;
-  border-radius: 15px;
+  border-radius: 12px;
   border: 1px solid var(--rosa-suave);
+  color: var(--texto-oscuro);
+  text-decoration: none; /* Quita subrayado */
   font-weight: 600;
   transition: 0.3s;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.02);
 }
 
 .contact-item:hover {
   background: var(--rosa-suave);
-  text-decoration: none;
   transform: translateY(-3px);
+  color: var(--rosa-oscuro);
 }
 
-/* --- KEYFRAMES --- */
+.contact-item i {
+  font-size: 18px;
+}
+
+/* --- ANIMACIÓN --- */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(30px); }
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 32px; }
+  .contact-grid { flex-direction: column; }
 }
