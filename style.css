@@ -19,7 +19,7 @@ body {
   background: var(--rosa-fondo);
   color: var(--texto-oscuro);
   line-height: 1.6;
-  padding: 60px 20px;
+  padding: 80px 20px;
 }
 
 .container {
@@ -29,7 +29,7 @@ body {
 
 /* --- HEADER --- */
 header {
-  margin-bottom: 60px;
+  margin-bottom: 80px;
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
 }
@@ -41,52 +41,32 @@ h1 {
   display: flex;
   align-items: center;
   gap: 15px;
-  flex-wrap: wrap;
+}
+
+.header-socials {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
+}
+
+.header-socials a {
+  color: var(--texto-secundario);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.header-socials a:hover {
+  color: var(--rosa-brillante);
+  transform: scale(1.2);
 }
 
 .subtitle {
   font-size: 19px;
   color: var(--texto-secundario);
-  margin: 10px 0 25px 0;
   font-weight: 500;
-  max-width: 600px;
 }
 
-.header-actions {
-  display: flex;
-  align-items: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.cv-button {
-  background: transparent !important;
-  color: var(--rosa-brillante) !important;
-  border: 2px solid var(--rosa-brillante) !important;
-}
-
-.cv-button:hover {
-  background: var(--rosa-brillante) !important;
-  color: white !important;
-}
-
-.header-socials {
-  display: flex;
-  gap: 20px;
-  font-size: 26px;
-}
-
-.header-socials a {
-  color: var(--texto-secundario);
-  transition: 0.3s;
-}
-
-.header-socials a:hover {
-  color: var(--rosa-brillante);
-  transform: translateY(-3px);
-}
-
-/* --- SECCIONES --- */
+/* --- SECCIONES Y ANIMACIÓN --- */
 section {
   margin-bottom: 80px;
   opacity: 0;
@@ -102,11 +82,6 @@ h2 {
   margin-bottom: 25px;
   border-left: 5px solid var(--rosa-brillante);
   padding-left: 15px;
-  color: var(--texto-oscuro);
-}
-
-p {
-  margin-bottom: 15px;
 }
 
 /* --- TARJETAS --- */
@@ -116,18 +91,17 @@ p {
   border-radius: 24px;
   border: 1px solid var(--rosa-suave);
   box-shadow: 0 10px 40px rgba(236, 72, 153, 0.08);
-  transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 45px rgba(236, 72, 153, 0.15);
 }
 
 .project-media {
   width: 100%;
   border-radius: 18px;
-  margin: 20px 0;
+  margin: 25px 0;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -148,8 +122,7 @@ p {
   font-weight: 600;
   background: var(--rosa-brillante);
   color: white;
-  transition: 0.3s;
-  border: none;
+  transition: 0.2s;
 }
 
 .button:hover {
@@ -166,7 +139,6 @@ p {
 .contact-grid {
   display: flex;
   gap: 20px;
-  flex-wrap: wrap;
 }
 
 .contact-item {
@@ -177,25 +149,18 @@ p {
   background: white;
   border-radius: 15px;
   border: 1px solid var(--rosa-suave);
-  color: var(--texto-oscuro);
   font-weight: 600;
   transition: 0.3s;
-  text-decoration: none;
 }
 
 .contact-item:hover {
   background: var(--rosa-suave);
+  text-decoration: none;
   transform: translateY(-3px);
-  color: var(--rosa-oscuro);
 }
 
-/* --- ANIMACIÓN --- */
+/* --- KEYFRAMES --- */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
-}
-
-@media (max-width: 600px) {
-  h1 { font-size: 32px; }
-  .header-actions { gap: 20px; }
 }
