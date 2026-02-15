@@ -56,10 +56,6 @@ h2 {
   box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
 }
 
-.buttons {
-  margin-top: 20px;
-}
-
 .button {
   display: inline-block;
   padding: 12px 20px;
@@ -68,13 +64,13 @@ h2 {
   font-size: 14px;
   font-weight: 500;
   margin-right: 12px;
-  background: #2563eb;
+  background: #ec4899;  /* ← rosa */
   color: white;
   transition: all 0.2s ease;
 }
 
 .button:hover {
-  background: #1d4ed8;
+  background: #db2777; /* rosa más profundo */
   transform: translateY(-2px);
 }
 
