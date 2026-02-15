@@ -6,11 +6,11 @@
 }
 
 :root {
-  --rosa-fondo: #fff5f7;      /* Rosa casi blanco */
-  --rosa-brillante: #ec4899;  /* Rosa principal */
-  --rosa-oscuro: #be185d;     /* Para hovers */
-  --rosa-suave: #fce7f3;      /* Fondos secundarios */
-  --texto-oscuro: #331d2c;    /* Gris muy oscuro/bordó */
+  --rosa-fondo: #fff5f7;
+  --rosa-brillante: #ec4899;
+  --rosa-oscuro: #be185d;
+  --rosa-suave: #fce7f3;
+  --texto-oscuro: #331d2c;
   --texto-secundario: #704d60;
 }
 
@@ -20,7 +20,6 @@ body {
   color: var(--texto-oscuro);
   line-height: 1.6;
   padding: 80px 20px;
-  overflow-x: hidden;
 }
 
 .container {
@@ -28,85 +27,82 @@ body {
   margin: 0 auto;
 }
 
-/* --- HEADER Y TÍTULOS --- */
+/* --- HEADER --- */
 header {
   margin-bottom: 80px;
-  opacity: 0; /* Para la animación */
+  opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
-  animation-delay: 0.1s;
 }
 
 h1 {
   font-size: 42px;
   font-weight: 800;
-  letter-spacing: -1.5px;
   color: var(--rosa-brillante);
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-/* Efecto divertido al icono del nombre */
-h1 i {
-  font-size: 32px;
-  transition: transform 0.3s ease;
+.header-socials {
+  margin-top: 15px;
+  display: flex;
+  gap: 20px;
+  font-size: 24px;
 }
 
-h1:hover i {
-  transform: rotate(-15deg) scale(1.2);
+.header-socials a {
+  color: var(--texto-secundario);
+  transition: color 0.3s, transform 0.3s;
+}
+
+.header-socials a:hover {
+  color: var(--rosa-brillante);
+  transform: scale(1.2);
 }
 
 .subtitle {
   font-size: 19px;
   color: var(--texto-secundario);
-  margin-top: 12px;
   font-weight: 500;
 }
 
 /* --- SECCIONES Y ANIMACIÓN --- */
 section {
   margin-bottom: 80px;
-  opacity: 0; /* Para la animación */
+  opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-/* Retrasos para efecto cascada */
-#sobre-mi { animation-delay: 0.3s; }
-#proyectos { animation-delay: 0.5s; }
-#contacto { animation-delay: 0.7s; }
+#sobre-mi { animation-delay: 0.2s; }
+#proyectos { animation-delay: 0.4s; }
+#contacto { animation-delay: 0.6s; }
 
 h2 {
   font-size: 26px;
   margin-bottom: 25px;
-  font-weight: 700;
   border-left: 5px solid var(--rosa-brillante);
   padding-left: 15px;
-  color: var(--texto-oscuro);
 }
 
-/* --- TARJETAS DE PROYECTOS --- */
+/* --- TARJETAS --- */
 .card {
   background: #ffffff;
   padding: 35px;
   border-radius: 24px;
   border: 1px solid var(--rosa-suave);
   box-shadow: 0 10px 40px rgba(236, 72, 153, 0.08);
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: 0.3s;
 }
 
 .card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 45px rgba(236, 72, 153, 0.15);
 }
 
 .project-media {
   width: 100%;
   border-radius: 18px;
   margin: 25px 0;
-  padding: 6px;
-  background: linear-gradient(135deg, #fff, var(--rosa-suave));
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-  transition: transform 0.4s ease;
 }
 
 /* --- BOTONES --- */
@@ -114,7 +110,6 @@ h2 {
   margin-top: 25px;
   display: flex;
   gap: 12px;
-  flex-wrap: wrap;
 }
 
 .button {
@@ -124,48 +119,48 @@ h2 {
   padding: 12px 24px;
   border-radius: 12px;
   text-decoration: none;
-  font-size: 14px;
   font-weight: 600;
   background: var(--rosa-brillante);
   color: white;
-  transition: all 0.2s ease;
+  transition: 0.2s;
 }
 
 .button:hover {
   background: var(--rosa-oscuro);
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(236, 72, 153, 0.3);
 }
 
-/* Botón secundario para "Ver Código" */
 .button.secondary {
   background: var(--rosa-suave);
   color: var(--rosa-oscuro);
 }
 
-.button.secondary:hover {
-  background: #fbcfe8;
+/* --- CONTACTO --- */
+.contact-grid {
+  display: flex;
+  gap: 20px;
 }
 
-/* --- ENLACES Y CONTACTO --- */
-a {
-  color: var(--rosa-brillante);
-  text-decoration: none;
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 15px 25px;
+  background: white;
+  border-radius: 15px;
+  border: 1px solid var(--rosa-suave);
   font-weight: 600;
+  transition: 0.3s;
 }
 
-a:hover {
-  text-decoration: underline;
+.contact-item:hover {
+  background: var(--rosa-suave);
+  text-decoration: none;
+  transform: translateY(-3px);
 }
 
-/* --- KEYFRAMES (ANIMACIÓN) --- */
+/* --- KEYFRAMES --- */
 @keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
 }
