@@ -7,7 +7,7 @@ Como **Support Guru en Tiendanube**, identifiqué que muchos usuarios tenían di
 
 ## 🛠️ Tecnologías utilizadas
 * **HTML5**: Estructura semántica.
-* **CSS3**: Diseño responsivo y estilizado (Pink Theme).
+* **CSS3**: Diseño responsivo y estilizado.
 * **JavaScript (Vanilla)**: Lógica de cálculo de tasas y manipulación del DOM.
 
 ## 📸 Demo
