@@ -1,15 +1,26 @@
+/* --- CONFIGURACIÓN Y VARIABLES --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+:root {
+  --rosa-fondo: #fff5f7;      /* Rosa casi blanco */
+  --rosa-brillante: #ec4899;  /* Rosa principal */
+  --rosa-oscuro: #be185d;     /* Para hovers */
+  --rosa-suave: #fce7f3;      /* Fondos secundarios */
+  --texto-oscuro: #331d2c;    /* Gris muy oscuro/bordó */
+  --texto-secundario: #704d60;
+}
+
 body {
   font-family: 'Inter', 'Segoe UI', sans-serif;
-  background: #f1f5f9;
-  color: #0f172a;
+  background: var(--rosa-fondo);
+  color: var(--texto-oscuro);
   line-height: 1.6;
   padding: 80px 20px;
+  overflow-x: hidden;
 }
 
 .container {
@@ -17,96 +28,144 @@ body {
   margin: 0 auto;
 }
 
+/* --- HEADER Y TÍTULOS --- */
 header {
   margin-bottom: 80px;
+  opacity: 0; /* Para la animación */
+  animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
 h1 {
   font-size: 42px;
-  font-weight: 700;
-  letter-spacing: -1px;
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  color: var(--rosa-brillante);
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Efecto divertido al icono del nombre */
+h1 i {
+  font-size: 32px;
+  transition: transform 0.3s ease;
+}
+
+h1:hover i {
+  transform: rotate(-15deg) scale(1.2);
 }
 
 .subtitle {
-  font-size: 18px;
-  color: #475569;
+  font-size: 19px;
+  color: var(--texto-secundario);
   margin-top: 12px;
+  font-weight: 500;
 }
 
+/* --- SECCIONES Y ANIMACIÓN --- */
 section {
   margin-bottom: 80px;
+  opacity: 0; /* Para la animación */
+  animation: fadeInUp 0.8s ease-out forwards;
 }
+
+/* Retrasos para efecto cascada */
+#sobre-mi { animation-delay: 0.3s; }
+#proyectos { animation-delay: 0.5s; }
+#contacto { animation-delay: 0.7s; }
 
 h2 {
   font-size: 26px;
   margin-bottom: 25px;
-  font-weight: 600;
+  font-weight: 700;
+  border-left: 5px solid var(--rosa-brillante);
+  padding-left: 15px;
+  color: var(--texto-oscuro);
 }
 
+/* --- TARJETAS DE PROYECTOS --- */
 .card {
   background: #ffffff;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 8px 30px rgba(15, 23, 42, 0.05);
-  transition: all 0.25s ease;
+  padding: 35px;
+  border-radius: 24px;
+  border: 1px solid var(--rosa-suave);
+  box-shadow: 0 10px 40px rgba(236, 72, 153, 0.08);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 40px rgba(15, 23, 42, 0.08);
+  transform: translateY(-8px);
+  box-shadow: 0 15px 45px rgba(236, 72, 153, 0.15);
 }
 
+.project-media {
+  width: 100%;
+  border-radius: 18px;
+  margin: 25px 0;
+  padding: 6px;
+  background: linear-gradient(135deg, #fff, var(--rosa-suave));
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.4s ease;
+}
+
+/* --- BOTONES --- */
 .buttons {
-  margin-top: 20px;
+  margin-top: 25px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
 }
 
 .button {
-  display: inline-block;
-  padding: 12px 20px;
-  border-radius: 10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  border-radius: 12px;
   text-decoration: none;
   font-size: 14px;
-  font-weight: 500;
-  margin-right: 12px;
-  background: #ec4899; /* rosa elegante */
+  font-weight: 600;
+  background: var(--rosa-brillante);
   color: white;
   transition: all 0.2s ease;
 }
 
 .button:hover {
-  background: #db2777; /* rosa más profundo */
+  background: var(--rosa-oscuro);
   transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(236, 72, 153, 0.3);
 }
 
+/* Botón secundario para "Ver Código" */
+.button.secondary {
+  background: var(--rosa-suave);
+  color: var(--rosa-oscuro);
+}
+
+.button.secondary:hover {
+  background: #fbcfe8;
+}
+
+/* --- ENLACES Y CONTACTO --- */
 a {
-  color: #ec4899;
+  color: var(--rosa-brillante);
   text-decoration: none;
+  font-weight: 600;
 }
 
 a:hover {
   text-decoration: underline;
 }
 
-.project-media {
-  width: 100%;
-  border-radius: 14px;
-  margin: 20px 0;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project-media:hover {
-  transform: scale(1.02);
-  box-shadow: 0 15px 40px rgba(15, 23, 42, 0.12);
-}
-
-
-.project-media {
-  width: 100%;
-  border-radius: 14px;
-  margin: 20px 0;
-  padding: 8px;
-  background: #f8fafc;
-  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* --- KEYFRAMES (ANIMACIÓN) --- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
