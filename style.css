@@ -11,6 +11,12 @@ a {
   color: inherit;
 }
 
+h1:hover i {
+  transform: rotate(-10deg) scale(1.2);
+  color: var(--rosa-oscuro);
+  transition: all 0.3s ease;
+}
+
 :root {
   --rosa-fondo: #fff5f7;
   --rosa-brillante: #ec4899;
