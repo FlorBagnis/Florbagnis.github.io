@@ -1,8 +1,14 @@
-/* --- CONFIGURACIÓN Y VARIABLES --- */
+/* --- RESET Y ELIMINACIÓN DE ESTILOS POR DEFECTO --- */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/* Forzamos a que ningún link tenga subrayado o color azul de navegador */
+a {
+  text-decoration: none !important;
+  color: inherit;
 }
 
 :root {
@@ -20,6 +26,7 @@ body {
   color: var(--texto-oscuro);
   line-height: 1.6;
   padding: 80px 20px;
+  overflow-x: hidden;
 }
 
 .container {
@@ -32,38 +39,51 @@ header {
   margin-bottom: 80px;
   opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
+  animation-delay: 0.1s;
 }
 
 h1 {
   font-size: 42px;
   font-weight: 800;
+  letter-spacing: -1.5px;
   color: var(--rosa-brillante);
   display: flex;
   align-items: center;
   gap: 15px;
 }
 
-.header-socials {
-  margin-top: 15px;
-  display: flex;
-  gap: 20px;
-  font-size: 24px;
+h1 i {
+  font-size: 32px;
+  transition: all 0.3s ease;
 }
 
-.header-socials a {
-  color: var(--texto-secundario);
-  transition: color 0.3s, transform 0.3s;
-}
-
-.header-socials a:hover {
-  color: var(--rosa-brillante);
-  transform: scale(1.2);
+/* EL EFECTO QUE PEDISTE */
+h1:hover i {
+  transform: rotate(-10deg) scale(1.2);
+  color: var(--rosa-oscuro);
 }
 
 .subtitle {
   font-size: 19px;
   color: var(--texto-secundario);
+  margin: 12px 0 20px 0;
   font-weight: 500;
+}
+
+.header-socials {
+  display: flex;
+  gap: 20px;
+  font-size: 28px;
+}
+
+.header-socials a {
+  color: var(--texto-secundario);
+  transition: 0.3s;
+}
+
+.header-socials a:hover {
+  color: var(--rosa-brillante);
+  transform: translateY(-3px);
 }
 
 /* --- SECCIONES Y ANIMACIÓN --- */
@@ -73,15 +93,17 @@ section {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
-#sobre-mi { animation-delay: 0.2s; }
-#proyectos { animation-delay: 0.4s; }
-#contacto { animation-delay: 0.6s; }
+#sobre-mi { animation-delay: 0.3s; }
+#proyectos { animation-delay: 0.5s; }
+#contacto { animation-delay: 0.7s; }
 
 h2 {
   font-size: 26px;
   margin-bottom: 25px;
+  font-weight: 700;
   border-left: 5px solid var(--rosa-brillante);
   padding-left: 15px;
+  color: var(--texto-oscuro);
 }
 
 /* --- TARJETAS --- */
@@ -91,11 +113,7 @@ h2 {
   border-radius: 24px;
   border: 1px solid var(--rosa-suave);
   box-shadow: 0 10px 40px rgba(236, 72, 153, 0.08);
-  transition: 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-8px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .project-media {
@@ -105,7 +123,7 @@ h2 {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
-/* --- BOTONES --- */
+/* --- BOTONES PROYECTOS --- */
 .buttons {
   margin-top: 25px;
   display: flex;
@@ -114,14 +132,11 @@ h2 {
 
 .button {
   display: inline-flex;
-  align-items: center;
-  gap: 8px;
   padding: 12px 24px;
   border-radius: 12px;
-  text-decoration: none;
   font-weight: 600;
   background: var(--rosa-brillante);
-  color: white;
+  color: white !important;
   transition: 0.2s;
 }
 
@@ -132,35 +147,44 @@ h2 {
 
 .button.secondary {
   background: var(--rosa-suave);
-  color: var(--rosa-oscuro);
+  color: var(--rosa-oscuro) !important;
 }
 
-/* --- CONTACTO --- */
+/* --- CONTACTO (BOTONES BLANCOS) --- */
 .contact-grid {
   display: flex;
   gap: 20px;
 }
 
 .contact-item {
-  display: flex;
+  display: inline-flex;
   align-items: center;
-  gap: 10px;
-  padding: 15px 25px;
-  background: white;
-  border-radius: 15px;
+  gap: 12px;
+  padding: 15px 30px;
+  background-color: #ffffff !important;
+  border-radius: 18px;
   border: 1px solid var(--rosa-suave);
+  color: #4a1d3d !important;
   font-weight: 600;
-  transition: 0.3s;
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.1);
+  transition: 0.3s ease;
 }
 
 .contact-item:hover {
-  background: var(--rosa-suave);
-  text-decoration: none;
-  transform: translateY(-3px);
+  transform: translateY(-5px);
+  color: var(--rosa-brillante) !important;
 }
 
-/* --- KEYFRAMES --- */
+.contact-item i.fa-linkedin { color: #0077b5; }
+.contact-item i.fa-github { color: #333; }
+
+/* --- ANIMACIÓN --- */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(30px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+  .contact-grid { flex-direction: column; }
+  h1 { font-size: 32px; }
 }
