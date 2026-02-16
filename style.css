@@ -6,7 +6,7 @@
 }
 
 a {
-  text-decoration: none;
+  text-decoration: none !important;
   color: inherit;
 }
 
@@ -27,6 +27,7 @@ body {
   color: var(--texto-oscuro);
   line-height: 1.6;
   padding: 80px 20px;
+  overflow-x: hidden;
 }
 
 .container {
@@ -37,18 +38,8 @@ body {
 /* HEADER */
 header {
   margin-bottom: 80px;
+  opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
-}
-
-.availability {
-  display: inline-block;
-  margin-top: 10px;
-  padding: 6px 14px;
-  background-color: var(--rosa-suave);
-  color: var(--rosa-oscuro);
-  border-radius: 999px;
-  font-size: 14px;
-  font-weight: 600;
 }
 
 h1 {
@@ -61,10 +52,32 @@ h1 {
   gap: 15px;
 }
 
+h1 i {
+  font-size: 32px;
+  transition: all 0.3s ease;
+}
+
+h1:hover i {
+  transform: rotate(-10deg) scale(1.2);
+  color: var(--rosa-oscuro);
+}
+
 .subtitle {
   font-size: 19px;
   color: var(--texto-secundario);
-  margin: 12px 0 20px;
+  margin: 12px 0 8px;
+  font-weight: 500;
+}
+
+.availability {
+  display: inline-block;
+  padding: 6px 14px;
+  background-color: var(--rosa-suave);
+  color: var(--rosa-oscuro);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 20px;
 }
 
 .header-socials {
@@ -73,15 +86,28 @@ h1 {
   font-size: 28px;
 }
 
+.header-socials a {
+  color: var(--texto-secundario);
+  transition: 0.3s;
+}
+
 .header-socials a:hover {
   color: var(--rosa-brillante);
+  transform: translateY(-3px);
 }
 
 /* SECCIONES */
 section {
   margin-bottom: 80px;
+  opacity: 0;
   animation: fadeInUp 0.8s ease-out forwards;
+  width: 100%;
 }
+
+#sobre-mi { animation-delay: 0.3s; }
+#tecnologias { animation-delay: 0.4s; }
+#proyectos { animation-delay: 0.5s; }
+#contacto { animation-delay: 0.6s; }
 
 h2 {
   font-size: 26px;
@@ -115,6 +141,18 @@ h2 {
   display: flex;
   align-items: center;
   gap: 8px;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(236, 72, 153, 0.05);
+  transition: all 0.3s ease;
+}
+
+.tech-stack-general span:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.15);
+}
+
+.tech-stack-general span i {
+  color: var(--rosa-brillante);
 }
 
 /* DESTACADOS */
@@ -122,6 +160,7 @@ h2 {
   background: linear-gradient(135deg, #ec4899, #be185d);
   color: white;
   border: none;
+  box-shadow: 0 10px 25px rgba(236, 72, 153, 0.25);
 }
 
 .tech-stack-general.highlight span i {
@@ -130,20 +169,28 @@ h2 {
 
 /* PROYECTOS */
 .card {
-  background: white;
+  background: #ffffff;
   padding: 35px;
   border-radius: 24px;
   border: 1px solid var(--rosa-suave);
+  box-shadow: 0 10px 40px rgba(236, 72, 153, 0.08);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
 }
 
 .project-media {
   width: 100%;
   border-radius: 18px;
   margin: 25px 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
 .project-tags {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 20px;
 }
@@ -151,10 +198,11 @@ h2 {
 .project-tags span {
   font-size: 12px;
   font-weight: 700;
-  background: var(--rosa-suave);
+  background-color: var(--rosa-suave);
   color: var(--rosa-oscuro);
   padding: 5px 12px;
   border-radius: 8px;
+  text-transform: uppercase;
 }
 
 /* BOTONES */
@@ -164,16 +212,23 @@ h2 {
 }
 
 .button {
+  display: inline-flex;
   padding: 12px 24px;
   border-radius: 12px;
   font-weight: 600;
   background: var(--rosa-brillante);
-  color: white;
+  color: white !important;
+  transition: 0.2s;
+}
+
+.button:hover {
+  background: var(--rosa-oscuro);
+  transform: translateY(-2px);
 }
 
 .button.secondary {
   background: var(--rosa-suave);
-  color: var(--rosa-oscuro);
+  color: var(--rosa-oscuro) !important;
 }
 
 /* CONTACTO */
@@ -183,14 +238,25 @@ h2 {
 }
 
 .contact-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
   padding: 15px 30px;
-  background: white;
+  background-color: #ffffff !important;
   border-radius: 18px;
   border: 1px solid var(--rosa-suave);
+  color: #4a1d3d !important;
   font-weight: 600;
+  box-shadow: 0 8px 20px rgba(236, 72, 153, 0.1);
+  transition: 0.3s ease;
 }
 
-/* ANIMACION */
+.contact-item:hover {
+  transform: translateY(-5px);
+  color: var(--rosa-brillante) !important;
+}
+
+/* ANIMACIONES */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -200,12 +266,20 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
-
+}
 
 /* RESPONSIVE */
 @media (max-width: 600px) {
-  h1 { font-size: 32px; }
-  .contact-grid { flex-direction: column; }
-  .tech-stack-general span { width: 100%; }
+  .contact-grid {
+    flex-direction: column;
+  }
+
+  h1 {
+    font-size: 32px;
+  }
+
+  .tech-stack-general span {
+    width: 100%;
+  }
 }
 
