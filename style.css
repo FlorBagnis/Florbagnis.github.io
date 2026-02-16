@@ -188,3 +188,54 @@ h2 {
   .contact-grid { flex-direction: column; }
   h1 { font-size: 32px; }
 }
+
+/* --- NUEVOS ESTILOS PARA TECNOLOGÍAS --- */
+
+/* Contenedor de la sección general */
+.tech-stack-general {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.tech-stack-general span {
+  background: white;
+  border: 1px solid var(--rosa-suave);
+  padding: 10px 20px;
+  border-radius: 14px;
+  font-weight: 600;
+  color: var(--texto-secundario);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 15px;
+  box-shadow: 0 4px 10px rgba(236, 72, 153, 0.05);
+}
+
+.tech-stack-general span i {
+  color: var(--rosa-brillante);
+  font-size: 18px;
+}
+
+/* Etiquetas dentro de la tarjeta de proyecto */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0;
+}
+
+.project-tags span {
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  background-color: var(--rosa-suave);
+  color: var(--rosa-oscuro);
+  padding: 5px 12px;
+  border-radius: 8px;
+}
+
+/* Animación para la nueva sección */
+#tecnologias { animation-delay: 0.4s; }
+
