@@ -40,6 +40,17 @@ header {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
+.availability {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 6px 14px;
+  background-color: var(--rosa-suave);
+  color: var(--rosa-oscuro);
+  border-radius: 999px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
 h1 {
   font-size: 42px;
   font-weight: 800;
