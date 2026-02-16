@@ -202,6 +202,17 @@ h2 {
   }
 }
 
+h1 i {
+  font-size: 32px;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+
+h1:hover i {
+  transform: rotate(-10deg) scale(1.2);
+  color: var(--rosa-oscuro);
+}
+
+
 /* RESPONSIVE */
 @media (max-width: 600px) {
   h1 { font-size: 32px; }
