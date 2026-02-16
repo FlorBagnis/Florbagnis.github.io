@@ -200,17 +200,6 @@ h2 {
     opacity: 1;
     transform: translateY(0);
   }
-}
-
-h1 i {
-  font-size: 32px;
-  transition: transform 0.3s ease, color 0.3s ease;
-}
-
-h1:hover i {
-  transform: rotate(-10deg) scale(1.2);
-  color: var(--rosa-oscuro);
-}
 
 
 /* RESPONSIVE */
