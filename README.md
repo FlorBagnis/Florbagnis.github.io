@@ -1,67 +1,86 @@
-# 💳 Calculadora de Tasas
+# 💼 Portfolio | Florencia Bagnis
 
-<img width="554" height="519" alt="image" src="https://github.com/user-attachments/assets/f4072db1-1a74-4329-b0ef-207b6e6c64a1" />
+Bienvenido/a a mi portfolio personal.
+
+<img width="1901" height="878" alt="image" src="https://github.com/user-attachments/assets/3778347d-3337-45ef-9c55-023f20b5fdf8" />
 
 
-Aplicación web desarrollada como proyecto personal para simular el cálculo de tasas, cuotas y montos netos en ventas online.
+Este sitio reúne algunos de los proyectos que desarrollé durante mi formación en Desarrollo Web y refleja mi interés por combinar mi experiencia en **Customer Support** con el desarrollo de soluciones web intuitivas, funcionales y responsive.
 
-La idea surgió a partir de mi experiencia como **Support Guru en Tiendanube**, donde asistía a comercios con consultas relacionadas con medios de pago, costos y liquidaciones. El objetivo fue crear una herramienta simple que facilitara este tipo de cálculos y, al mismo tiempo, poner en práctica mis conocimientos de desarrollo web.
+## 🌐 Portfolio Online
 
-> **Importante:** Este proyecto fue desarrollado de manera independiente y no representa una herramienta oficial de Tiendanube.
-
----
-
-## 🚀 Demo
-
-🔗 https://florbagnis.github.io/calculadora-pagonube/
+🔗 https://florbagnis.github.io/
 
 ---
 
-## 📂 Repositorio
+## 🚀 Proyectos destacados
 
-🔗 https://github.com/FlorBagnis/calculadora-tiendanube
+### 💳 Calculadora de Tasas
 
----
+Aplicación web desarrollada como proyecto personal para simular el cálculo de tasas, cuotas y montos netos.
 
-## ✨ Funcionalidades
+**Demo:**  
+https://florbagnis.github.io/calculadora-pagonube/
 
-- Cálculo de tasas según el medio de pago.
-- Simulación de cuotas.
-- Cálculo del monto neto a recibir.
-- Interfaz intuitiva y responsive.
-- Resultados inmediatos.
+**Repositorio:**  
+https://github.com/FlorBagnis/calculadora-tiendanube
 
 ---
 
-## 🛠️ Tecnologías utilizadas
+### 🌸 Honeymoon
+
+Proyecto Final del curso **Desarrollo Web** de **Coderhouse**.
+
+Sitio web responsive desarrollado para una marca ficticia de indumentaria inspirada en la estética kawaii.
+
+**Demo:**  
+https://honeymoon-eight-nu.vercel.app/
+
+**Repositorio:**  
+https://github.com/FlorBagnis/coderhouse-honeymoon
+
+---
+
+## 🛠️ Tecnologías
 
 - HTML5
 - CSS3
 - JavaScript
+- SASS
+- Bootstrap 5
 - Git
 - GitHub
+- Responsive Design
 - Visual Studio Code
 
 ---
 
-## 📚 Objetivos del proyecto
+## 🎯 Objetivo
 
-Durante el desarrollo de esta aplicación se trabajó en:
-
-- Manipulación del DOM.
-- Eventos con JavaScript.
-- Operaciones matemáticas y lógica de programación.
-- Validación de datos.
-- Diseño responsive.
-- Organización del código.
-- Buenas prácticas de desarrollo web.
+Mi objetivo es seguir creciendo profesionalmente en el mundo de la tecnología, combinando mi experiencia en Customer Support con el desarrollo de interfaces web modernas, accesibles y funcionales.
 
 ---
 
-## 👩‍💻 Autora
+## 👩‍💻 Sobre mí
 
-**Florencia Bagnis**
+Soy **Customer Support Specialist** con experiencia en empresas SaaS y e-commerce.
 
-- 💼 LinkedIn: https://www.linkedin.com/in/florencia-bagnis-5043aa152/
-- 💻 Portfolio: https://florbagnis.github.io/
-- 📧 Email: florenciasoledadbagnis@gmail.com
+Durante mi paso por Tiendanube trabajé brindando soporte técnico y funcional a comercios, resolviendo incidencias, investigando problemas y acompañando a los clientes en el uso de la plataforma.
+
+Actualmente continúo ampliando mis conocimientos en desarrollo frontend para seguir creciendo dentro de la industria tecnológica.
+
+---
+
+## 📬 Contacto
+
+💼 LinkedIn  
+https://www.linkedin.com/in/florencia-bagnis-5043aa152/
+
+💻 GitHub  
+https://github.com/FlorBagnis
+
+🌐 Portfolio  
+https://florbagnis.github.io/
+
+📧 Email  
+florenciasoledadbagnis@gmail.com
