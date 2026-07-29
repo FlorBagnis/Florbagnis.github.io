@@ -1,17 +1,27 @@
 # 💼 Portfolio | Florencia Bagnis
 
-Bienvenido/a a mi portfolio personal.
+Este repositorio contiene el código fuente de mi portfolio personal, donde presento algunos de los proyectos que desarrollé durante mi formación en Desarrollo Web y mi experiencia en Customer Support.
 
 <img width="1901" height="878" alt="image" src="https://github.com/user-attachments/assets/3778347d-3337-45ef-9c55-023f20b5fdf8" />
 
 
-Este sitio reúne algunos de los proyectos que desarrollé durante mi formación en Desarrollo Web y refleja mi interés por combinar mi experiencia en **Customer Support** con el desarrollo de soluciones web intuitivas, funcionales y responsive.
 
 ## 🌐 Portfolio Online
 
 🔗 https://florbagnis.github.io/
 
 ---
+
+## 🛠️ Tecnologías
+
+- HTML5
+- CSS3
+- JavaScript
+- SASS
+- Bootstrap 5
+- Git
+- GitHub
+- Responsive Design
 
 ## 🚀 Proyectos destacados
 
@@ -41,19 +51,7 @@ https://github.com/FlorBagnis/coderhouse-honeymoon
 
 ---
 
-## 🛠️ Tecnologías
 
-- HTML5
-- CSS3
-- JavaScript
-- SASS
-- Bootstrap 5
-- Git
-- GitHub
-- Responsive Design
-- Visual Studio Code
-
----
 
 ## 🎯 Objetivo
 
