@@ -78,7 +78,7 @@ https://www.linkedin.com/in/florencia-bagnis-5043aa152/
 https://github.com/FlorBagnis
 
 🌐 Portfolio  
-https://florbagnis.github.io/
+https://florbagnis.github.io/Portfolio-FlorBagnis/
 
 📧 Email  
 florenciasoledadbagnis@gmail.com
