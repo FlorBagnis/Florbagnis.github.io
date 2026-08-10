@@ -499,7 +499,8 @@ footer p {
 }
 
 .cv-label {
-  font-size: 0.75em;
-  font-weight: 600;
-  margin-left: 4px;
+  font-size: 14px !important;
+  font-weight: 700;
+  margin-left: 3px;
+  vertical-align: middle;
 }
