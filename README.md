@@ -2,7 +2,8 @@
 
 Este repositorio contiene el código fuente de mi portfolio personal, donde presento algunos de los proyectos que desarrollé durante mi formación en Desarrollo Web y mi experiencia en Customer Support.
 
-<img width="1901" height="878" alt="image" src="https://github.com/user-attachments/assets/3778347d-3337-45ef-9c55-023f20b5fdf8" />
+<img width="1848" height="885" alt="image" src="https://github.com/user-attachments/assets/32d784e8-dc7a-4a04-bd1b-85ce354700dc" />
+
 
 
 
